@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="49">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.poIdentifier name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="79">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(READER)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#V"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#V"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm23/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧finite(init_reader_loaned(r))" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#O"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#O"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#M"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#M"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP4"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·b∈BOOK∧r1∈dom(p)∧r2∈dom(p)⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#T"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#T"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm22/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK⇒b∈dom(init_total_books)∧init_total_books∈BOOK ⇸ ℤ∧b∈dom(init_count_books)∧init_count_books∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#X"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#X"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP)" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="max_loaned_books∈ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(READER)∧finite(BOOK)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#W"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="max_ID∈ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#L"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP/" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="max_ID&gt;card(READER)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#V"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="init_books⊆BOOK" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="init_count_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="init_total_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#C"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP\/" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒finite(init_reader_loaned(r))" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="IDS=1 ‥ max_ID" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#R"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#H"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP3" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="∀r⦂READER·r∈READER∧card(init_reader_loaned(r))≤max_loaned_books" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#O"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP4" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP3" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧ran(init_book_reader_priority(b))⊆IDS" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#M"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP5" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP4" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·b∈BOOK∧r1∈dom(p)∧r2∈dom(p)∧p=init_book_reader_priority(b)∧p(r1)≠p(r2)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#T"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/LSctx.bpo|org.eventb.core.poFile#LSctx|org.eventb.core.poPredicateSet#HYP5" org.eventb.core.poStamp="81">
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧init_total_books(b)≥init_count_books(b)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#X"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

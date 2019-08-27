@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="customer_reservation∈RESERVATION → CUSTOMER" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="room_reservation∈RESERVATION → ROOM" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="dates_reservation∈RESERVATION → ℙ1(DATE)" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CUSTOMER" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CUSTOMER)"/>
+<org.eventb.core.scCarrierSet name="DATE" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.scCarrierSet name="RESERVATION" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(RESERVATION)"/>
+<org.eventb.core.scCarrierSet name="ROOM" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(ROOM)"/>
+<org.eventb.core.scConstant name="customer_reservation" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.constant#+" org.eventb.core.type="ℙ(RESERVATION×CUSTOMER)"/>
+<org.eventb.core.scConstant name="dates_reservation" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.constant#-" org.eventb.core.type="ℙ(RESERVATION×ℙ(DATE))"/>
+<org.eventb.core.scConstant name="room_reservation" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.constant#," org.eventb.core.type="ℙ(RESERVATION×ROOM)"/>
+</org.eventb.core.scContextFile>

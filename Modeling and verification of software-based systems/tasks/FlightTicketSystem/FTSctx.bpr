@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm5/THM"/>
+<org.eventb.core.prProof name="axm8/THM"/>
+<org.eventb.core.prProof name="axm8/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="f" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="CITY,FLIGHT">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees f)" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees f)" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="f_dest" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.prIdent name="f_origin" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="f∈FLIGHT">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="f_dest∈FLIGHT → CITY"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="f_origin∈FLIGHT ⇸ CITY"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀f⦂FLIGHT·f∈dom(f_origin)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="f∈dom(f_origin)">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT⇒f∈dom(f_dest)∧f_dest∈FLIGHT ⇸ CITY∧f∈dom(f_origin)∧f_origin∈FLIGHT ⇸ CITY"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="f_dest∈FLIGHT ⇸ CITY"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="f∈dom(f_dest)">
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="f_origin∈FLIGHT → CITY"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="(∀f⦂FLIGHT·f∈dom(f_dest))∧f_dest∈FLIGHT ⇸ CITY∧(∀f⦂FLIGHT·f∈dom(f_origin))∧f_origin∈FLIGHT ⇸ CITY"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀f⦂FLIGHT·f∈dom(f_dest)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀f⦂FLIGHT·⊤⇒f∈dom(f_dest)∧f_dest∈FLIGHT ⇸ CITY∧f∈dom(f_origin)∧f_origin∈FLIGHT ⇸ CITY"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="FLIGHT"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm9/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="d,f" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="DATE,FLIGHT,FLIGHT_INSTANCE">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees d,f)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="f_inst" org.eventb.core.type="ℙ(ℙ(FLIGHT×DATE)×FLIGHT_INSTANCE)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="{f ↦ d}∈FLIGHT ↔ DATE">
+<org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="{f ↦ d}∈dom(f_inst)">
+<org.eventb.core.prIdent name="d" org.eventb.core.type="DATE"/>
+<org.eventb.core.prIdent name="f" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·d∈DATE∧f∈FLIGHT⇒{f ↦ d}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="f_inst∈(FLIGHT ↔ DATE) → FLIGHT_INSTANCE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·{f ↦ d}∈dom(f_inst)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀f⦂FLIGHT·¬f_dest(f)=f_origin(f)">
+<org.eventb.core.prIdent name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.prIdent name="f_dest" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.prIdent name="f_origin" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·⊤∧⊤⇒{f ↦ d}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f_dest(f)≠f_origin(f)">
+<org.eventb.core.prIdent name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.prIdent name="f_dest" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.prIdent name="f_origin" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="(∀d⦂DATE,f⦂FLIGHT·{f ↦ d}∈dom(f_inst))∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="FLIGHT ↔ DATE"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

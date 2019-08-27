@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CUSTOMER" org.eventb.core.type="ℙ(CUSTOMER)"/>
+<org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.poIdentifier name="RESERVATION" org.eventb.core.type="ℙ(RESERVATION)"/>
+<org.eventb.core.poIdentifier name="ROOM" org.eventb.core.type="ℙ(ROOM)"/>
+<org.eventb.core.poIdentifier name="customer_reservation" org.eventb.core.type="ℙ(RESERVATION×CUSTOMER)"/>
+<org.eventb.core.poIdentifier name="dates_reservation" org.eventb.core.type="ℙ(RESERVATION×ℙ(DATE))"/>
+<org.eventb.core.poIdentifier name="room_reservation" org.eventb.core.type="ℙ(RESERVATION×ROOM)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HotelBookingSystem2/HBS2ctx.bpo|org.eventb.core.poFile#HBS2ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="customer_reservation∈RESERVATION → CUSTOMER" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="room_reservation∈RESERVATION → ROOM" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dates_reservation∈RESERVATION → ℙ1(DATE)" org.eventb.core.source="/HotelBookingSystem2/HBS2ctx.buc|org.eventb.core.contextFile#HBS2ctx|org.eventb.core.axiom#0"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

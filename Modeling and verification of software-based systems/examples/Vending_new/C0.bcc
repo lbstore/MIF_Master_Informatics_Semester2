@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="NONE∈CHOICES" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="price∈CHOICES ⇸ ℕ1" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="dom(price)=CHOICES ∖ {NONE}" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="initial_amount∈ℕ1" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="+" org.eventb.core.label="axm5" org.eventb.core.predicate="Items⊆CHOICES" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="," org.eventb.core.label="axm6" org.eventb.core.predicate="Items=CHOICES ∖ {NONE}" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="CHOICES" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(CHOICES)"/>
+<org.eventb.core.scConstant name="Items" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#\/" org.eventb.core.type="ℙ(CHOICES)"/>
+<org.eventb.core.scConstant name="NONE" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" org.eventb.core.type="CHOICES"/>
+<org.eventb.core.scConstant name="initial_amount" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#-" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="price" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#*" org.eventb.core.type="ℙ(CHOICES×ℤ)"/>
+</org.eventb.core.scContextFile>

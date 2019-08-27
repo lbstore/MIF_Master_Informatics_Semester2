@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.poIdentifier name="FLIGHT" org.eventb.core.type="ℙ(FLIGHT)"/>
+<org.eventb.core.poIdentifier name="FLIGHT_INSTANCE" org.eventb.core.type="ℙ(FLIGHT_INSTANCE)"/>
+<org.eventb.core.poIdentifier name="f_date" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×DATE)"/>
+<org.eventb.core.poIdentifier name="f_dest" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="f_flight" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×FLIGHT)"/>
+<org.eventb.core.poIdentifier name="f_inst" org.eventb.core.type="ℙ(ℙ(FLIGHT×DATE)×FLIGHT_INSTANCE)"/>
+<org.eventb.core.poIdentifier name="f_origin" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="f_price" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poIdentifier name="f_total_seats" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCF" org.eventb.core.predicate="f_price∈FLIGHT_INSTANCE → ℕ1" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCG" org.eventb.core.predicate="f_total_seats∈FLIGHT_INSTANCE → ℕ1" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCH" org.eventb.core.predicate="f_dest∈FLIGHT → CITY" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCI" org.eventb.core.predicate="f_origin∈FLIGHT → CITY" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCJ" org.eventb.core.predicate="f_date∈FLIGHT_INSTANCE → DATE" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCK" org.eventb.core.predicate="f_flight∈FLIGHT_INSTANCE → FLIGHT" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCL" org.eventb.core.predicate="f_inst∈(FLIGHT ↔ DATE) → FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCM" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f_dest(f)≠f_origin(f)" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#?"/>
+<org.eventb.core.poPredicate name="FLIGHT_INSTANCN" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·d∈DATE∧f∈FLIGHT∧f_inst({f ↦ d})∈FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="f_seats_arr" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT⇒f∈dom(f_dest)∧f_dest∈FLIGHT ⇸ CITY∧f∈dom(f_origin)∧f_origin∈FLIGHT ⇸ CITY" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f_total_seats∈FLIGHT_INSTANCE → ℕ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="¬(∃f⦂FLIGHT·f∈FLIGHT∧f_dest(f)=f_origin(f))" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTf_seats_ars" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="f_seats_arr'" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPf_seats_ars" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_ars" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="book tickets/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_art"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book tickets/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_art("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight ↦ date}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_art("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book tickets/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f_seats_arr{inst ↦ f_seats_arr(inst) − ticket_count}∈FLIGHT_INSTANCE → ℕ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#("/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poSequent#book tickets\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book tickets/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_art"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTf_seats_art" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="inst" org.eventb.core.type="FLIGHT_INSTANCE"/>
+<org.eventb.core.poIdentifier name="f_seats_arr'" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poIdentifier name="flight" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.poIdentifier name="ticket_count" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_art(" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_art" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ticket_count≤f_seats_arr(inst)" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ticket_count∈ℕ1" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPf_seats_art" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_art(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="inst=f_inst({flight ↦ date})" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="date∈DATE∧flight∈FLIGHT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#(|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="cancel tickets/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight ↦ date}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cancel tickets/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="inst∈dom(f_date)∧f_date∈FLIGHT_INSTANCE ⇸ DATE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cancel tickets/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cancel tickets/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f_seats_arr{inst ↦ f_seats_arr(inst)+ticket_count}∈FLIGHT_INSTANCE → ℕ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poSequent#cancel tickets\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cancel tickets/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.action#act1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_aru"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTf_seats_aru" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="inst" org.eventb.core.type="FLIGHT_INSTANCE"/>
+<org.eventb.core.poIdentifier name="f_seats_arr'" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poIdentifier name="flight" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.poIdentifier name="ticket_count" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_aru'" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_aru" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ticket_count∈ℕ1" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_aru(" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="inst=f_inst({flight ↦ date})" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_aru)" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="f_date(inst)=date" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPf_seats_aru" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_aru)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ticket_count≤f_seats_arr(inst)" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="inst∈FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#)|org.eventb.core.guard#grd5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="book merge flights/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{f1 ↦ date}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#:"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book merge flights/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{f2 ↦ date}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book merge flights/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f1_inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ∧(ticket_count≤f_seats_arr(f1_inst)⇒f2_inst∈dom(f_seats_arr)∧(ticket_count≤f_seats_arr(f2_inst)⇒f2∈dom(f_origin)∧f_origin∈FLIGHT ⇸ CITY∧f1∈dom(f_dest)∧f_dest∈FLIGHT ⇸ CITY∧(f_origin(f2)=f_dest(f1)⇒f2∈dom(f_dest)∧(f_dest(f2)=city_dest⇒f1∈dom(f_origin)))))" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book merge flights/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f1_inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book merge flights/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f2_inst∈dom(f_seats_arr)∧f_seats_arr∈FLIGHT_INSTANCE ⇸ ℤ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#B"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#B"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="book merge flights/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTALLHYPf_seats_arv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f_seats_arr{f1_inst ↦ newSeats1,f2_inst ↦ newSeats2}∈FLIGHT_INSTANCE → ℕ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poSequent#book merge flights\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTf_seats_arv" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="f1_inst" org.eventb.core.type="FLIGHT_INSTANCE"/>
+<org.eventb.core.poIdentifier name="city_dest" org.eventb.core.type="CITY"/>
+<org.eventb.core.poIdentifier name="newSeats1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f2" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.poIdentifier name="date" org.eventb.core.type="DATE"/>
+<org.eventb.core.poIdentifier name="city_origin" org.eventb.core.type="CITY"/>
+<org.eventb.core.poIdentifier name="f_seats_arr'" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poIdentifier name="f2_inst" org.eventb.core.type="FLIGHT_INSTANCE"/>
+<org.eventb.core.poIdentifier name="ticket_count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f1" org.eventb.core.type="FLIGHT"/>
+<org.eventb.core.poIdentifier name="newSeats2" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_arv'" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTIDENTf_seats_arv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ticket_count∈ℕ1" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_arv(" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="f1_inst=f_inst({f1 ↦ date})" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_arv*" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="f2_inst=f_inst({f2 ↦ date})" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#;"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="f1≠f2∧f1_inst≠f2_inst" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_arv," org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ticket_count≤f_seats_arr(f1_inst)∧ticket_count≤f_seats_arr(f2_inst)∧f_origin(f2)=f_dest(f1)∧f_dest(f2)=city_dest∧f_origin(f1)=city_origin" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="date∈DATE∧city_origin∈CITY∧city_dest∈CITY" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPf_seats_arv-" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="newSeats1=f_seats_arr(f1_inst) − ticket_count" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPf_seats_arv" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#EVTHYPf_seats_arv-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="newSeats2=f_seats_arr(f2_inst) − ticket_count" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.event#*|org.eventb.core.guard#B"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPFTScty" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="f_seats_arr∈FLIGHT_INSTANCE → ℕ" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/FlightTicketSystem/FTSmac.bpo|org.eventb.core.poFile#FTSmac|org.eventb.core.poPredicateSet#HYPFTScty" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="¬(∃f⦂FLIGHT·f∈FLIGHT∧f_dest(f)=f_origin(f))" org.eventb.core.source="/FlightTicketSystem/FTSmac.bum|org.eventb.core.machineFile#FTSmac|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

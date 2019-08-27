@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="Skrydzio modeliai (pradzios ir pabaigos miestas)" org.eventb.core.identifier="FLIGHT"/>
+<org.eventb.core.carrierSet name="7" org.eventb.core.comment="Konkretus skryčiai, turintys savo kaina, data, skrydžio modeli" org.eventb.core.identifier="FLIGHT_INSTANCE"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.comment="Dalyvaujancios datos" org.eventb.core.identifier="DATE"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.comment="Dalyvaujantys miestai" org.eventb.core.identifier="CITY"/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm1" org.eventb.core.predicate="f_price ∈ FLIGHT_INSTANCE → ℕ1"/>
+<org.eventb.core.constant name="/" org.eventb.core.identifier="f_price"/>
+<org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm7" org.eventb.core.predicate="f_total_seats ∈ FLIGHT_INSTANCE → ℕ1"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="f_dest ∈ FLIGHT → CITY"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="f_date"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm4" org.eventb.core.predicate="f_origin ∈ FLIGHT → CITY"/>
+<org.eventb.core.constant name="5" org.eventb.core.identifier="f_origin"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="f_dest"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm2" org.eventb.core.predicate="f_date ∈ FLIGHT_INSTANCE → DATE"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm5" org.eventb.core.predicate="f_flight ∈ FLIGHT_INSTANCE → FLIGHT"/>
+<org.eventb.core.constant name="9" org.eventb.core.identifier="f_inst"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="f_flight"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="axm6" org.eventb.core.predicate="f_inst ∈ (FLIGHT ↔ DATE) → FLIGHT_INSTANCE"/>
+<org.eventb.core.constant name="=" org.eventb.core.identifier="f_total_seats"/>
+<org.eventb.core.axiom name="?" org.eventb.core.comment="Skrydzio pradzia ir pabaiga nesutampa" org.eventb.core.label="axm8" org.eventb.core.predicate="∀ f · f ∈ FLIGHT ∧ f_dest(f) ≠ f_origin(f)"/>
+<org.eventb.core.axiom name="@" org.eventb.core.label="axm9" org.eventb.core.predicate="∀ d,f · d ∈ DATE ∧ f ∈ FLIGHT ∧ f_inst({f ↦ d}) ∈ FLIGHT_INSTANCE"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="access ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="perm_query ≔ NoAccess" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="printer_query ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="access"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="access ∈ USER ↔ PRINTER"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="perm_query"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="perm_query ∈ PERMISSION"/>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add_access">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ PRINTER"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="access ≔ access ∪ {u↦p}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="block_access">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∈ PRINTER"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="access ≔ access ∖ {u↦p}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ban_user">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="u ∈ dom(access)"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="access ≔ {u} ⩤ access" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="perm_query_OK">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="o"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ OPTION"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="(u↦o) ∈ access; Options"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="perm_query ≔ Ok" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="perm_query_NOK">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="o"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ OPTION"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="(u↦o) ∉ access; Options"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="perm_query ≔ NoAccess" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="evt5" org.eventb.core.target="C0"/>
+<org.eventb.core.variable name="evt6" org.eventb.core.identifier="printer_query"/>
+<org.eventb.core.invariant name="evt7" org.eventb.core.label="inv3" org.eventb.core.predicate="printer_query ∈ ℙ(USER)"/>
+<org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="printer_users">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="p ∈ PRINTER"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="printer_query ≔ dom (access ▷ {p})" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

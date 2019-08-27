@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="59">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="52">
+<org.eventb.core.poIdentifier name="Customers" org.eventb.core.type="ℙ(Customers)"/>
+<org.eventb.core.poIdentifier name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="rentable_rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poPredicate name="rentable_roomt" org.eventb.core.predicate="rentable_rooms=Rooms" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.axiom#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poIdentifier name="customers_in_system" org.eventb.core.type="ℙ(Customers)"/>
+<org.eventb.core.poIdentifier name="reserved_rooms" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="used_rooms" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="vacant_rooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systen"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×Customers))∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systen"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Rooms×Customers))∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systen"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rentable_rooms∈ℙ(rentable_rooms)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcustomers_in_systen" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poIdentifier name="vacant_rooms'" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="reserved_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="used_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="customers_in_system'" org.eventb.core.type="ℙ(Customers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcustomers_in_systen" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTIDENTcustomers_in_systen" org.eventb.core.poStamp="55"/>
+<org.eventb.core.poSequent name="reserve_room/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systeo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reserved_rooms∪{r ↦ c}∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#reserve_room\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_room/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systeo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vacant_rooms ∖ {r}∈ℙ(rentable_rooms)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#reserve_room\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcustomers_in_systeo" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poIdentifier name="vacant_rooms'" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="reserved_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="Customers"/>
+<org.eventb.core.poIdentifier name="customers_in_system'" org.eventb.core.type="ℙ(Customers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcustomers_in_systeo" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTIDENTcustomers_in_systeo" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#+|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r∈vacant_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#+|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="check_in/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="56">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systep"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="used_rooms∪{r ↦ c}∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#check_in\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="check_in/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="56">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systep"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reserved_rooms ∖ {r ↦ c}∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#check_in\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcustomers_in_systep" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poIdentifier name="reserved_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="Customers"/>
+<org.eventb.core.poIdentifier name="used_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcustomers_in_systep" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTIDENTcustomers_in_systep" org.eventb.core.poStamp="56">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈customers_in_system" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#0|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r∈rentable_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r ↦ c∈reserved_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#0|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="cancel_reservation/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="58">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systeq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reserved_rooms ∖ {r ↦ c}∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#cancel_reservation\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cancel_reservation/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="58">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_systeq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vacant_rooms∪{r}∈ℙ(rentable_rooms)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#cancel_reservation\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcustomers_in_systeq" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="58">
+<org.eventb.core.poIdentifier name="vacant_rooms'" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="reserved_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="Customers"/>
+<org.eventb.core.poIdentifier name="customers_in_system'" org.eventb.core.type="ℙ(Customers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcustomers_in_systeq" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTIDENTcustomers_in_systeq" org.eventb.core.poStamp="58">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈customers_in_system" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r∈rentable_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r ↦ c∈reserved_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#1|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="check_out/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_syster"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="used_rooms ∖ {r ↦ c}∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#check_out\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="check_out/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="59">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTALLHYPcustomers_in_syster"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vacant_rooms∪{r}∈ℙ(rentable_rooms)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poSequent#check_out\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcustomers_in_syster" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="59">
+<org.eventb.core.poIdentifier name="vacant_rooms'" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="Rooms"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="Customers"/>
+<org.eventb.core.poIdentifier name="used_rooms'" org.eventb.core.type="ℙ(Rooms×Customers)"/>
+<org.eventb.core.poIdentifier name="customers_in_system'" org.eventb.core.type="ℙ(Customers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcustomers_in_syster" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#EVTIDENTcustomers_in_syster" org.eventb.core.poStamp="59">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r∈rentable_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r ↦ c∈used_rooms" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.event#2|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSmac.bpo|org.eventb.core.poFile#HBSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="used_rooms∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="customers_in_system∈ℙ(Customers)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="reserved_rooms∈rentable_rooms ↔ Customers" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="vacant_rooms∈ℙ(rentable_rooms)" org.eventb.core.source="/HotelBookingSystem/HBSmac.bum|org.eventb.core.machineFile#HBSmac|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

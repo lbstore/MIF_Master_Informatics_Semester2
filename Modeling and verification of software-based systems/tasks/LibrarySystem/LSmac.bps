@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="inv9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan book (without wait reservation)/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd13/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="loan reserved book/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve book (add to wait list)/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="first reserve book (add first reservation)/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="first reserve book (add first reservation)/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="first reserve book (add first reservation)/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="first reserve book (add first reservation)/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="first reserve book (add first reservation)/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="return book/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add new books/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add new books/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add new books/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add new books/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add book copies/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="add book copies/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="add book copies/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add book copies/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add book copies/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add book copies/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/grd16/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="shrink waitlist id (only used if max_ID is small)/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="true"/>
+</org.eventb.core.psFile>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm2" org.eventb.core.predicate="rentable_rooms=Rooms" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.axiom#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Customers" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.carrierSet#," org.eventb.core.type="ℙ(Customers)"/>
+<org.eventb.core.scCarrierSet name="Rooms" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.scConstant name="rentable_rooms" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.constant#\/" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.scContextFile>

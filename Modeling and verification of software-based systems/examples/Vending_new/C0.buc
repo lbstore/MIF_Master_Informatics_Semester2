@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="CHOICES"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="NONE"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="NONE ∈ CHOICES"/>
+<org.eventb.core.constant name="*" org.eventb.core.identifier="price"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="price ∈ CHOICES ⇸ ℕ1 "/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="dom(price) = CHOICES ∖ {NONE}"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="initial_amount"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm4" org.eventb.core.predicate="initial_amount ∈ ℕ1 "/>
+<org.eventb.core.constant name="/" org.eventb.core.identifier="Items"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="Items ⊆ CHOICES"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm6" org.eventb.core.predicate="Items = CHOICES ∖ {NONE}"/>
+</org.eventb.core.contextFile>

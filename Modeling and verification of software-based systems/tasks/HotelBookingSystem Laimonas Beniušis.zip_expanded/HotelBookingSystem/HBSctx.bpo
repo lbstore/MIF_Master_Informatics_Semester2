@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="15">
+<org.eventb.core.poIdentifier name="Customers" org.eventb.core.type="ℙ(Customers)"/>
+<org.eventb.core.poIdentifier name="Rooms" org.eventb.core.type="ℙ(Rooms)"/>
+<org.eventb.core.poIdentifier name="rentable_rooms" org.eventb.core.type="ℙ(Rooms)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HotelBookingSystem/HBSctx.bpo|org.eventb.core.poFile#HBSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rentable_rooms=Rooms" org.eventb.core.source="/HotelBookingSystem/HBSctx.buc|org.eventb.core.contextFile#HBSctx|org.eventb.core.axiom#0"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

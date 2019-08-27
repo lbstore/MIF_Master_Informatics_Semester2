@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.poIdentifier name="DATE" org.eventb.core.type="ℙ(DATE)"/>
+<org.eventb.core.poIdentifier name="FLIGHT" org.eventb.core.type="ℙ(FLIGHT)"/>
+<org.eventb.core.poIdentifier name="FLIGHT_INSTANCE" org.eventb.core.type="ℙ(FLIGHT_INSTANCE)"/>
+<org.eventb.core.poIdentifier name="f_date" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×DATE)"/>
+<org.eventb.core.poIdentifier name="f_dest" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="f_flight" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×FLIGHT)"/>
+<org.eventb.core.poIdentifier name="f_inst" org.eventb.core.type="ℙ(ℙ(FLIGHT×DATE)×FLIGHT_INSTANCE)"/>
+<org.eventb.core.poIdentifier name="f_origin" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="f_price" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+<org.eventb.core.poIdentifier name="f_total_seats" org.eventb.core.type="ℙ(FLIGHT_INSTANCE×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT⇒f∈dom(f_dest)∧f_dest∈FLIGHT ⇸ CITY∧f∈dom(f_origin)∧f_origin∈FLIGHT ⇸ CITY" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#?"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·d∈DATE∧f∈FLIGHT⇒{f ↦ d}∈dom(f_inst)∧f_inst∈ℙ(FLIGHT × DATE) ⇸ FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP-" org.eventb.core.parentSet="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="f_price∈FLIGHT_INSTANCE → ℕ1" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="f_total_seats∈FLIGHT_INSTANCE → ℕ1" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="f_dest∈FLIGHT → CITY" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="f_origin∈FLIGHT → CITY" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="f_date∈FLIGHT_INSTANCE → DATE" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="f_flight∈FLIGHT_INSTANCE → FLIGHT" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="f_inst∈(FLIGHT ↔ DATE) → FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP." org.eventb.core.parentSet="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f_dest(f)≠f_origin(f)" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#?"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/FlightTicketSystemRef/FTSctx.bpo|org.eventb.core.poFile#FTSctx|org.eventb.core.poPredicateSet#HYP." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀d⦂DATE,f⦂FLIGHT·d∈DATE∧f∈FLIGHT∧f_inst({f ↦ d})∈FLIGHT_INSTANCE" org.eventb.core.source="/FlightTicketSystemRef/FTSctx.buc|org.eventb.core.contextFile#FTSctx|org.eventb.core.axiom#@"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

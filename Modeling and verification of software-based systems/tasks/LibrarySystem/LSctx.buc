@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="BOOK"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="READER"/>
+<org.eventb.core.constant name="4" org.eventb.core.identifier="max_loaned_books"/>
+<org.eventb.core.constant name="K" org.eventb.core.identifier="max_ID"/>
+<org.eventb.core.constant name="S" org.eventb.core.identifier="IDS"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="init_books"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="init_count_books"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm1" org.eventb.core.predicate="max_loaned_books ∈ ℕ1"/>
+<org.eventb.core.axiom name="W" org.eventb.core.label="axm21" org.eventb.core.predicate="finite(READER) ∧ finite(BOOK)"/>
+<org.eventb.core.axiom name="L" org.eventb.core.label="axm13" org.eventb.core.predicate="max_ID ∈ ℕ1 "/>
+<org.eventb.core.axiom name="V" org.eventb.core.label="axm20" org.eventb.core.predicate="max_ID &gt; card(READER)"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm2" org.eventb.core.predicate="init_books ⊆ BOOK"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm3" org.eventb.core.predicate="init_count_books ∈ BOOK → ℕ1"/>
+<org.eventb.core.constant name=";" org.eventb.core.identifier="init_total_books"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm4" org.eventb.core.predicate="init_total_books ∈ BOOK → ℕ1"/>
+<org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm5" org.eventb.core.predicate="init_books = dom(init_total_books) ∧ init_books = dom(init_count_books)"/>
+<org.eventb.core.constant name="?" org.eventb.core.identifier="init_reader_loaned"/>
+<org.eventb.core.axiom name="C" org.eventb.core.label="axm6" org.eventb.core.predicate="init_reader_loaned ∈ READER → ℙ(BOOK)"/>
+<org.eventb.core.axiom name="Y" org.eventb.core.label="axm23" org.eventb.core.predicate="∀ r· r ∈ READER ⇒ finite(init_reader_loaned(r))"/>
+<org.eventb.core.axiom name="R" org.eventb.core.label="axm17" org.eventb.core.predicate="IDS = 1 ‥ max_ID"/>
+<org.eventb.core.axiom name="H" org.eventb.core.label="axm11" org.eventb.core.predicate="init_book_reader_priority ∈ BOOK → (READER ⤔ IDS)"/>
+<org.eventb.core.axiom name="O" org.eventb.core.label="axm15" org.eventb.core.predicate="∀ r · r ∈ READER ∧ card(init_reader_loaned(r)) ≤ max_loaned_books"/>
+<org.eventb.core.axiom name="M" org.eventb.core.label="axm14" org.eventb.core.predicate="∀ b · b ∈ BOOK ∧ ran(init_book_reader_priority(b)) ⊆ IDS"/>
+<org.eventb.core.constant name="N" org.eventb.core.identifier="init_book_reader_priority"/>
+<org.eventb.core.axiom name="T" org.eventb.core.label="axm18" org.eventb.core.predicate="∀ b,r1,r2, p · b ∈ BOOK ∧ r1 ∈ dom(p) ∧ r2 ∈ dom(p) ∧ p = init_book_reader_priority(b) ∧ p(r1) ≠ p(r2)"/>
+<org.eventb.core.axiom name="X" org.eventb.core.label="axm22" org.eventb.core.predicate="∀ b · b ∈ BOOK ∧ init_total_books(b) ≥ init_count_books(b)"/>
+</org.eventb.core.contextFile>

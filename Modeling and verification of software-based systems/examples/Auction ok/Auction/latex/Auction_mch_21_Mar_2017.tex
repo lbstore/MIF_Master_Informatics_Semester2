@@ -1,0 +1,230 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of Auction\_mch}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{Auction\_mch}{21Mar2017}{01:19:53 PM}
+\MACHINE{Auction\_mch}
+\SEES{Auction\_ctx}
+\VARIABLES
+	\begin{description}
+		\Item{ in\_auction }
+		\Item{ time\_left }
+		\Item{ item\_seller }
+		\Item{ highest\_bids }
+		\Item{ bids\_buyer }
+		\Item{ paid\_items }
+		\Item{ seller\_log }
+		\Item{ buyer\_log }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ inv1 }{ in\_auction \in  \pow(ITEM) }
+		\nItem{ inv2 }{ time\_left \in  ITEM \pfun  \nat }
+		\nItem{ inv3 }{ dom(time\_left) = in\_auction }
+		\nItem{ inv4 }{ item\_seller \in  ITEM \pfun  SELLER }
+		\nItem{ inv5 }{ dom(item\_seller) = in\_auction }
+		\nItem{ inv6 }{ highest\_bids \in  ITEM \pfun  \nat_1  }
+		\nItem{ inv7 }{ dom(highest\_bids) \subseteq  in\_auction }
+		\nItem{ inv8 }{ bids\_buyer \in  ITEM \pfun  BUYER }
+		\nItem{ inv9 }{ dom(bids\_buyer) = dom(highest\_bids) }
+		\nItem{ inv10 }{ paid\_items \in  \pow(ITEM) }
+		\nItem{ inv11 }{ paid\_items \subseteq  in\_auction }
+		\nItem{ inv12 }{ seller\_log \in  ITEM \pfun  SELLER }
+		\nItem{ inv13 }{ buyer\_log \in  ITEM \pfun  BUYER }
+		\nItem{ inv14 }{ dom(seller\_log) \binter  in\_auction \subseteq  paid\_items }
+		\nItem{ inv15 }{ dom(buyer\_log) \subseteq  dom(seller\_log) }
+		\nItem{ inv16 }{ dom(buyer\_log) \binter  in\_auction \subseteq  paid\_items }
+		\nItem{ inv17 }{ \forall i\qdot  i \notin  in\_auction \limp  (i \in  dom(buyer\_log) \leqv  i \in  dom(seller\_log)) }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ time\_left :=  \emptyset  }
+			\nItem{ act2 }{ highest\_bids :=  \emptyset  }
+			\nItem{ act3 }{ buyer\_log :=  \emptyset    }
+			\nItem{ act4 }{ in\_auction :=  \emptyset  }
+			\nItem{ act5 }{ seller\_log :=  \emptyset  }
+			\nItem{ act6 }{ bids\_buyer :=  \emptyset  }
+			\nItem{ act7 }{ paid\_items :=  \emptyset  }
+			\nItem{ act8 }{ item\_seller :=  \emptyset  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {new\_item}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{s }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  ITEM }
+			\nItem{ grd2 }{ i \notin  in\_auction }
+			\nItem{ grd3 }{ i \notin  dom(buyer\_log) }
+			\nItem{ grd4 }{ s \in  SELLER }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ in\_auction :=  in\_auction \bunion  \{ i\}  }
+			\nItem{ act2 }{ time\_left (i) :=  Max\_time }
+			\nItem{ act3 }{ item\_seller(i) :=  s }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {new\_bid}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{n }
+			\Item{b }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  dom(highest\_bids) }
+			\nItem{ grd2 }{ n \in  \nat_1  }
+			\nItem{ grd3 }{ n >  highest\_bids(i) }
+			\nItem{ grd4 }{ b \in  BUYER }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ highest\_bids(i) :=  n }
+			\nItem{ act2 }{ bids\_buyer(i) :=  b }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {new\_bid\_first\_time}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{n }
+			\Item{b }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \notin  dom(highest\_bids) }
+			\nItem{ grd4 }{ i \in  in\_auction }
+			\nItem{ grd2 }{ n \in  \nat_1  }
+			\nItem{ grd5 }{ b \in  BUYER }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ highest\_bids(i) :=  n }
+			\nItem{ act2 }{ bids\_buyer(i) :=  b }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {payment}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  in\_auction }
+			\nItem{ grd2 }{ time\_left(i) = 0 }
+			\nItem{ grd3 }{ i \in  dom(highest\_bids) }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ paid\_items :=  paid\_items \bunion  \{ i\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {sell\_confirm}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{s }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  paid\_items }
+			\nItem{ grd2 }{ s \in  SELLER }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ seller\_log(i) :=  s }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {buy\_confirm}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{b }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  paid\_items }
+			\nItem{ grd2 }{ b \in  BUYER }
+			\nItem{ grd3 }{ i\mapsto item\_seller(i) \in  seller\_log }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ buyer\_log(i) :=  b }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {item\_done}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  in\_auction }
+			\nItem{ grd2 }{ i \in  dom(buyer\_log) }
+			\nItem{ {\it grd3} }{ i \in  dom(seller\_log) }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ in\_auction :=  in\_auction \setminus  \{ i\}  }
+			\nItem{ act2 }{ time\_left :=  \{ i\}  \domsub  time\_left }
+			\nItem{ act3 }{ item\_seller :=  \{ i\}  \domsub  item\_seller }
+			\nItem{ act6 }{ bids\_buyer :=  \{ i\}  \domsub  bids\_buyer  }
+			\nItem{ act4 }{ highest\_bids :=  \{ i\}  \domsub  highest\_bids }
+			\nItem{ act5 }{ paid\_items :=  paid\_items \setminus  \{ i\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {time\_pass}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{i }
+			\Item{new\_time }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ i \in  dom(time\_left) }
+			\nItem{ grd2 }{ time\_left(i) >  0 }
+			\nItem{ grd5 }{ new\_time \in  \nat  }
+			\nItem{ grd3 }{ new\_time <  time\_left(i) }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ time\_left(i) :=  new\_time }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

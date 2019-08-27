@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="used_rooms ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="reserved_rooms ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="vacant_rooms ≔ rentable_rooms" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="customers_in_system ≔ ∅" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="HBSctx"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="used_rooms"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="used_rooms ∈ rentable_rooms ↔ Customers"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="reserve_room">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ Customers"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="reserved_rooms ≔ reserved_rooms ∪ {r ↦ c}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="vacant_rooms ≔ vacant_rooms ∖ {r}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="r ∈ vacant_rooms"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="customers_in_system ≔ customers_in_system ∪ {c}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="," org.eventb.core.identifier="reserved_rooms"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv4" org.eventb.core.predicate="customers_in_system ∈ ℙ(Customers)"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="reserved_rooms ∈ rentable_rooms ↔ Customers"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="vacant_rooms"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="vacant_rooms ∈ ℙ(rentable_rooms)"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check_in">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ customers_in_system"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ rentable_rooms"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="used_rooms ≔ used_rooms ∪ {r ↦ c}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="reserved_rooms ≔ reserved_rooms ∖ {r ↦ c}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="(r ↦ c) ∈ reserved_rooms"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancel_reservation">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ customers_in_system"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ rentable_rooms"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="reserved_rooms ≔ reserved_rooms ∖ {r ↦ c}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="vacant_rooms ≔ vacant_rooms ∪ {r}" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="(r ↦ c) ∈ reserved_rooms"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="customers_in_system ≔ customers_in_system ∖ {c}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check_out">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ Customers"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ rentable_rooms"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="used_rooms ≔ used_rooms ∖ {r ↦ c}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="vacant_rooms ≔ vacant_rooms ∪ {r}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="(r ↦ c) ∈ used_rooms"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="customers_in_system ≔ customers_in_system ∖ {c}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="customers_in_system"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CHOICES" org.eventb.core.type="ℙ(CHOICES)"/>
+<org.eventb.core.poIdentifier name="Items" org.eventb.core.type="ℙ(CHOICES)"/>
+<org.eventb.core.poIdentifier name="NONE" org.eventb.core.type="CHOICES"/>
+<org.eventb.core.poIdentifier name="initial_amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="price" org.eventb.core.type="ℙ(CHOICES×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Vending/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="NONE∈CHOICES" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="price∈CHOICES ⇸ ℕ1" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(price)=CHOICES ∖ {NONE}" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="initial_amount∈ℕ1" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Items⊆CHOICES" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Items=CHOICES ∖ {NONE}" org.eventb.core.source="/Vending/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

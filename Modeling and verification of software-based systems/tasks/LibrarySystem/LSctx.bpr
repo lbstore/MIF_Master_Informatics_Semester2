@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm10/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="r" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="BOOK,READER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees r)" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees r)" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀r⦂READER·r∈dom(init_reader_loaned)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="r∈READER">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="finite(init_reader_loaned(r))">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(∀r⦂READER·r∈dom(init_reader_loaned))∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧(∀r⦂READER·finite(init_reader_loaned(r)))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="r∈dom(init_reader_loaned)">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀r⦂READER·⊤⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀r⦂READER·finite(init_reader_loaned(r))"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="READER"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm13/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK,READER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p4"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(BOOK)∧finite(READER)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="max_ID∈ℕ1⇒finite(BOOK)∧finite(READER)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="max_ID∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm15/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="r" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="BOOK,READER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="p14">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees r)" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p24" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p25">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀r⦂READER·r∈dom(init_reader_loaned)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(READER)∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="(∀r⦂READER·r∈dom(init_reader_loaned))∧init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)">
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="r∈dom(init_reader_loaned)">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ 1 ‥ max_ID)">
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀r⦂READER·⊤⇒finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀r⦂READER·finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="r∈READER">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="IDS=1 ‥ max_ID"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="(∀r⦂READER·r∈dom(init_reader_loaned))∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧(∀r⦂READER·finite(init_reader_loaned(r)))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀r⦂READER·⊤⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧finite(init_reader_loaned(r))"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="(∀r⦂READER·r∈dom(init_reader_loaned))∧init_reader_loaned∈READER ⇸ ℙ(BOOK)∧⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="READER"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm14/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="b" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="BOOK,READER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees b)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p7">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p20" org.eventb.core.prHyps="p21">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p24" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p25">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="b∈dom(init_book_reader_priority)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="(∀b⦂BOOK·b∈dom(init_book_reader_priority))∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(READER)∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀r⦂READER·r∈READER"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀b⦂BOOK·⊤⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀b⦂BOOK·b∈dom(init_book_reader_priority)"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ 1 ‥ max_ID)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="b∈BOOK">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀r⦂READER·r∈READER∧card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀r⦂READER·⊤⇒finite(init_reader_loaned(r))">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀r⦂READER·finite(init_reader_loaned(r))">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="IDS=1 ‥ max_ID"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂READER·card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒finite(init_reader_loaned(r))">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="BOOK"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm18/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="r2,p,b,r1" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="BOOK,READER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees b,r1,r2,p)" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="r1" org.eventb.core.type="READER"/>
+<org.eventb.core.prIdent name="r2" org.eventb.core.type="READER"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p19,p20">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p23,p14"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p27" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p29">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p30">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p32" org.eventb.core.prHyps="p31">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p23,p14"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with p=init_book_reader_priority(b)" org.eventb.core.prGoal="p32" org.eventb.core.prHyps="p31">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p19,p20"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for init_book_reader_priority(b)" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p36">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p36"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="b∈dom(init_book_reader_priority)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="r2∈dom(p)">
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.prIdent name="r2" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(READER)∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⇸ IDS)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂READER·r∈READER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·b∈BOOK∧r1∈dom(p)∧r2∈dom(p)⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧ran(init_book_reader_priority(b))⊆IDS"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·r1∈dom(p)∧r2∈dom(p)⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="init_book_reader_priority(b)∈READER ⤔ IDS">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⇸ 1 ‥ max_ID)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="b∈BOOK">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀r⦂READER·r∈READER∧card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·⊤∧r1∈dom(p)∧r2∈dom(p)⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="r2∈dom(init_book_reader_priority(b))">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="r2" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀b⦂BOOK·ran(init_book_reader_priority(b))⊆IDS"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀b⦂BOOK·ran(init_book_reader_priority(b))⊆1 ‥ max_ID"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="p=init_book_reader_priority(b)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="r1∈dom(p)∧r2∈dom(p)⇒b∈dom(init_book_reader_priority)∧init_book_reader_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(p=init_book_reader_priority(b)⇒p∈READER ⇸ ℤ)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.prIdent name="r1" org.eventb.core.type="READER"/>
+<org.eventb.core.prIdent name="r2" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="r1∈dom(init_book_reader_priority(b))">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="r1" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="IDS=1 ‥ max_ID"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀r⦂READER·card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="r1∈dom(p)">
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.prIdent name="r1" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="p∈READER ⇸ ℤ">
+<org.eventb.core.prIdent name="p" org.eventb.core.type="ℙ(READER×ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="init_book_reader_priority(b)∈READER ⇸ ℤ">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="BOOK"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.funImgGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm20/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="BOOK,READER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p0">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊥∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(READER)∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm22/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="b" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="BOOK">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11,p12"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p17,p18,p19"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees b)" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p25" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p27"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p25,p15"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p28"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p24" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p29">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p30">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p30" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p31">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p32">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees b)" org.eventb.core.prGoal="p32" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with IDS=1 ‥ max_ID" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p25" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p27"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p25,p15"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p8">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p28"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p29">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p30">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p30" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p34">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p34" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀b⦂BOOK,p⦂ℙ(READER×ℤ)·p=init_book_reader_priority(b)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="init_count_books∈BOOK ⇸ ℤ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·b∈BOOK∧r1∈dom(p)∧r2∈dom(p)∧p=init_book_reader_priority(b)∧p(r1)≠p(r2)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀b⦂BOOK·⊤⇒b∈dom(init_total_books)∧init_total_books∈BOOK ⇸ ℤ∧b∈dom(init_count_books)∧init_count_books∈BOOK ⇸ ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK⇒b∈dom(init_total_books)∧init_total_books∈BOOK ⇸ ℤ∧b∈dom(init_count_books)∧init_count_books∈BOOK ⇸ ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(READER)∧finite(BOOK)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⇸ IDS)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(READER)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀r1⦂READER,p⦂ℙ(READER×ℤ)·r1∈dom(p)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂READER·r∈READER">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="b∈dom(init_total_books)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="init_count_books∈BOOK → ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧ran(init_book_reader_priority(b))⊆IDS">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⇸ 1 ‥ max_ID)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="b∈BOOK">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀r⦂READER·r∈READER∧card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="b∈dom(init_count_books)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOK"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀b⦂BOOK·ran(init_book_reader_priority(b))⊆IDS">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀b⦂BOOK·ran(init_book_reader_priority(b))⊆1 ‥ max_ID">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="(∀b⦂BOOK·b∈dom(init_total_books))∧init_total_books∈BOOK ⇸ ℤ∧(∀b⦂BOOK·b∈dom(init_count_books))∧init_count_books∈BOOK ⇸ ℤ"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="IDS=1 ‥ max_ID"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="init_total_books∈BOOK ⇸ ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀r⦂READER·card(init_reader_loaned(r))≤max_loaned_books">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="max_loaned_books" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·¬p(r1)=p(r2)">
+<org.eventb.core.prIdent name="READER" org.eventb.core.type="ℙ(READER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="init_total_books∈BOOK → ℕ1"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀b⦂BOOK·b∈dom(init_total_books)"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀b⦂BOOK·b∈dom(init_count_books)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="BOOK"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm23/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="r" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="BOOK,READER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees r)" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with init_books=dom(init_total_books)" org.eventb.core.prHyps="p6">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p16" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p17">
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prIdent name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.prIdent name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="init_books⊆BOOK"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀r⦂READER·⊤⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀r⦂READER·r∈dom(init_reader_loaned)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒r∈dom(init_reader_loaned)∧init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="r∈READER">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="dom(init_total_books)=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(READER)∧finite(BOOK)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="(∀r⦂READER·r∈dom(init_reader_loaned))∧init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(READER)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="init_books=dom(init_total_books)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="init_reader_loaned∈READER ⇸ ℙ(BOOK)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="r∈dom(init_reader_loaned)">
+<org.eventb.core.prIdent name="r" org.eventb.core.type="READER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="init_books=dom(init_count_books)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="READER"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

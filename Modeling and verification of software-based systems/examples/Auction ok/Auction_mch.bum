@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="time_left ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="highest_bids ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="buyer_log ≔ ∅  " org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="in_auction ≔ ∅" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="seller_log ≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="bids_buyer ≔ ∅" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="paid_items ≔ ∅" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="item_seller ≔ ∅" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Auction_ctx"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="in_auction"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="time_left"/>
+<org.eventb.core.variable name="evt11" org.eventb.core.identifier="item_seller"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv1" org.eventb.core.predicate="in_auction ∈ ℙ(ITEM)"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv2" org.eventb.core.predicate="time_left ∈ ITEM ⇸ ℕ"/>
+<org.eventb.core.invariant name="evt8" org.eventb.core.label="inv3" org.eventb.core.predicate="dom(time_left) = in_auction"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="highest_bids"/>
+<org.eventb.core.invariant name="evt12" org.eventb.core.label="inv4" org.eventb.core.predicate="item_seller ∈ ITEM ⇸ SELLER"/>
+<org.eventb.core.invariant name="evt13" org.eventb.core.label="inv5" org.eventb.core.predicate="dom(item_seller) = in_auction"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv6" org.eventb.core.predicate="highest_bids ∈ ITEM ⇸ ℕ1 "/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="bids_buyer"/>
+<org.eventb.core.variable name="evt2" org.eventb.core.identifier="paid_items"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="seller_log"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="buyer_log"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="dom(highest_bids) ⊆ in_auction"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv8" org.eventb.core.predicate="bids_buyer ∈ ITEM ⇸ BUYER"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv9" org.eventb.core.predicate="dom(bids_buyer) = dom(highest_bids)"/>
+<org.eventb.core.invariant name="evt3" org.eventb.core.label="inv10" org.eventb.core.predicate="paid_items ∈ ℙ(ITEM)"/>
+<org.eventb.core.invariant name="evt14" org.eventb.core.label="inv11" org.eventb.core.predicate="paid_items ⊆ in_auction"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv12" org.eventb.core.predicate="seller_log ∈ ITEM ⇸ SELLER"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv13" org.eventb.core.predicate="buyer_log ∈ ITEM ⇸ BUYER"/>
+<org.eventb.core.invariant name="evt4" org.eventb.core.label="inv14" org.eventb.core.predicate="dom(seller_log) ∩ in_auction ⊆ paid_items"/>
+<org.eventb.core.invariant name="evt5" org.eventb.core.label="inv15" org.eventb.core.predicate="dom(buyer_log) ⊆ dom(seller_log)"/>
+<org.eventb.core.invariant name="evt6" org.eventb.core.label="inv16" org.eventb.core.predicate="dom(buyer_log) ∩ in_auction ⊆ paid_items"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv17" org.eventb.core.predicate="∀i· i ∉ in_auction ⇒ (i ∈ dom(buyer_log) ⇔ i ∈ dom(seller_log))"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="new_item">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ ITEM"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="i ∉ in_auction"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="i ∉ dom(buyer_log)"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="s ∈ SELLER"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="in_auction ≔ in_auction ∪ {i}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="time_left (i) ≔ Max_time" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="item_seller(i) ≔ s" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="new_bid">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ dom(highest_bids)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ ℕ1 "/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="n &gt; highest_bids(i)"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="highest_bids(i) ≔ n" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="b"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="bids_buyer(i) ≔ b" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="b ∈ BUYER"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="new_bid_first_time">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∉ dom(highest_bids)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="i ∈ in_auction"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ ℕ1 "/>
+<org.eventb.core.action name="," org.eventb.core.assignment="highest_bids(i) ≔ n" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="b ∈ BUYER"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="bids_buyer(i) ≔ b" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="payment">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ in_auction"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="time_left(i) = 0"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="paid_items ≔ paid_items ∪ {i}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="i ∈ dom(highest_bids)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sell_confirm">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ paid_items"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="s ∈ SELLER"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="seller_log(i) ≔ s" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt10" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="buy_confirm">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="i ∈ paid_items"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="b ∈ BUYER"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="buyer_log(i) ≔ b" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="i ∈ dom(seller_log)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt15" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="item_done">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ in_auction"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="i ∈ dom(buyer_log)"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="in_auction ≔ in_auction ∖ {i}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="time_left ≔ {i} ⩤ time_left" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="item_seller ≔ {i} ⩤ item_seller" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="bids_buyer ≔ {i} ⩤ bids_buyer " org.eventb.core.label="act6"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="highest_bids ≔ {i} ⩤ highest_bids" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="paid_items ≔ paid_items ∖ {i}" org.eventb.core.label="act5"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd3" org.eventb.core.predicate="i ∈ dom(seller_log)" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="time_pass">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ dom(time_left)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="time_left(i) ≔ new_time" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="new_time"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="time_left(i) &gt; 0"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="new_time ∈ ℕ "/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="new_time &lt; time_left(i)"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

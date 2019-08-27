@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="BUYER" org.eventb.core.type="ℙ(BUYER)"/>
+<org.eventb.core.poIdentifier name="ITEM" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="SELLER" org.eventb.core.type="ℙ(SELLER)"/>
+<org.eventb.core.poIdentifier name="Max_time" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="Max_timf" org.eventb.core.predicate="Max_time∈ℕ1" org.eventb.core.source="/Auction/Auction_ctx.buc|org.eventb.core.contextFile#Auction_ctx|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="bids_buyer" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="buyer_log" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="highest_bids" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="in_auction" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="item_seller" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="paid_items" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="seller_log" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="time_left" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×ℤ))∈ITEM ⇸ ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×ℤ))=(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×SELLER))∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×SELLER))=(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×ℤ))∈ITEM ⇸ ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×ℤ))⊆(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×BUYER))∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×BUYER))=dom(∅ ⦂ ℙ(ITEM×ℤ))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM))⊆(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×SELLER))∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD11"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ITEM×BUYER))∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×SELLER))∩(∅ ⦂ ℙ(ITEM))⊆(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×BUYER))⊆dom(∅ ⦂ ℙ(ITEM×SELLER))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(∅ ⦂ ℙ(ITEM×BUYER))∩(∅ ⦂ ℙ(ITEM))⊆(∅ ⦂ ℙ(ITEM))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ITEM·i∉(∅ ⦂ ℙ(ITEM))⇒(i∈dom(∅ ⦂ ℙ(ITEM×BUYER))⇔i∈dom(∅ ⦂ ℙ(ITEM×SELLER)))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#INITIALISATION\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidt" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="paid_items'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="buyer_log'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="seller_log'" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="time_left'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="bids_buyer'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="highest_bids'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="in_auction'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="item_seller'" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidt" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidt" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="new_item/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="time_left{i ↦ Max_time}∈ITEM ⇸ ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(time_left{i ↦ Max_time})=in_auction∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="item_seller{i ↦ s}∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(item_seller{i ↦ s})=in_auction∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(highest_bids)⊆in_auction∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="paid_items⊆in_auction∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(seller_log)∩(in_auction∪{i})⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log)∩(in_auction∪{i})⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_item/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i0⦂ITEM·i0∉in_auction∪{i}⇒(i0∈dom(buyer_log)⇔i0∈dom(seller_log))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_item\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidu" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="time_left'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="s" org.eventb.core.type="SELLER"/>
+<org.eventb.core.poIdentifier name="in_auction'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="item_seller'" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidu" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈ITEM" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="i∉in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="i∉dom(buyer_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="s∈SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="new_bid/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i∈dom(highest_bids)∧highest_bids∈ITEM ⇸ ℤ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidv("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="highest_bids{i ↦ n}∈ITEM ⇸ ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(highest_bids{i ↦ n})⊆in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bids_buyer{i ↦ b}∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(bids_buyer{i ↦ b})=dom(highest_bids{i ↦ n})" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidv" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="BUYER"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="bids_buyer'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="highest_bids'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPhighest_bidv(" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈dom(highest_bids)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidv" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidv(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n&gt;highest_bids(i)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b∈BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#6|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="new_bid_first_time/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="highest_bids{i ↦ n}∈ITEM ⇸ ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid_first_time\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid_first_time/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(highest_bids{i ↦ n})⊆in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid_first_time\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid_first_time/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bids_buyer{i ↦ b}∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid_first_time\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="new_bid_first_time/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(bids_buyer{i ↦ b})=dom(highest_bids{i ↦ n})" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#new_bid_first_time\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidw" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="BUYER"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="bids_buyer'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="highest_bids'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidw" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∉dom(highest_bids)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="i∈in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n∈ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b∈BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt1|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="payment/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidx'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i∈dom(time_left)∧time_left∈ITEM ⇸ ℤ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidx'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="payment/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="paid_items∪{i}⊆in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#payment\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="payment/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(seller_log)∩in_auction⊆paid_items∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#payment\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="payment/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log)∩in_auction⊆paid_items∪{i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#payment\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidx" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="paid_items'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPhighest_bidx'" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidx" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidx" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bidx'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="time_left(i)=0" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="i∈dom(highest_bids)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt7|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="sell_confirm/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="seller_log{i ↦ s}∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#sell_confirm\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD11"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sell_confirm/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(seller_log{i ↦ s})∩in_auction⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#sell_confirm\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sell_confirm/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log)⊆dom(seller_log{i ↦ s})" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#sell_confirm\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sell_confirm/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i0⦂ITEM·i0∉in_auction⇒(i0∈dom(buyer_log)⇔i0∈dom(seller_log{i ↦ s}))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#sell_confirm\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidy" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="seller_log'" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="s" org.eventb.core.type="SELLER"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidy" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="s∈SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt9|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="buy_confirm/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="buyer_log{i ↦ b}∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#buy_confirm\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="buy_confirm/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log{i ↦ b})⊆dom(seller_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#buy_confirm\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="buy_confirm/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log{i ↦ b})∩in_auction⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#buy_confirm\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="buy_confirm/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bidz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i0⦂ITEM·i0∉in_auction⇒(i0∈dom(buyer_log{i ↦ b})⇔i0∈dom(seller_log))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#buy_confirm\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bidz" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="BUYER"/>
+<org.eventb.core.poIdentifier name="buyer_log'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bidz" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bidz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b∈BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="i∈dom(seller_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt10|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="item_done/grd3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid{("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i∈dom(seller_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid{("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{i} ⩤ time_left∈ITEM ⇸ ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom({i} ⩤ time_left)=in_auction ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{i} ⩤ item_seller∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom({i} ⩤ item_seller)=in_auction ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{i} ⩤ highest_bids∈ITEM ⇸ ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom({i} ⩤ highest_bids)⊆in_auction ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{i} ⩤ bids_buyer∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom({i} ⩤ bids_buyer)=dom({i} ⩤ highest_bids)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="paid_items ∖ {i}⊆in_auction ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(seller_log)∩(in_auction ∖ {i})⊆paid_items ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(buyer_log)∩(in_auction ∖ {i})⊆paid_items ∖ {i}" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="item_done/inv17/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i0⦂ITEM·i0∉in_auction ∖ {i}⇒(i0∈dom(buyer_log)⇔i0∈dom(seller_log))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#item_done\/inv17\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bid{" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="paid_items'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="time_left'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="bids_buyer'" org.eventb.core.type="ℙ(ITEM×BUYER)"/>
+<org.eventb.core.poIdentifier name="highest_bids'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="in_auction'" org.eventb.core.type="ℙ(ITEM)"/>
+<org.eventb.core.poIdentifier name="item_seller'" org.eventb.core.type="ℙ(ITEM×SELLER)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPhighest_bid{(" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bid{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="i∈dom(buyer_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bid{" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid{(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="i∈dom(seller_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#evt15|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="time_pass/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i∈dom(time_left)∧time_left∈ITEM ⇸ ℤ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="time_pass/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i∈dom(time_left)∧time_left∈ITEM ⇸ ℤ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="time_pass/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="time_left{i ↦ new_time}∈ITEM ⇸ ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#time_pass\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="time_pass/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTALLHYPhighest_bid\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(time_left{i ↦ new_time})=in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poSequent#time_pass\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENThighest_bid|" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="new_time" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="time_left'" org.eventb.core.type="ℙ(ITEM×ℤ)"/>
+<org.eventb.core.poIdentifier name="i" org.eventb.core.type="ITEM"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPhighest_bid|'" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTIDENThighest_bid\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈dom(time_left)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPhighest_bid|)" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="time_left(i)&gt;0" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="new_time∈ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPhighest_bid|" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#EVTHYPhighest_bid\|)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="new_time&lt;time_left(i)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.event#+|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Auction/Auction_mch.bpo|org.eventb.core.poFile#Auction_mch|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="in_auction∈ℙ(ITEM)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="time_left∈ITEM ⇸ ℕ" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(time_left)=in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt8"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="item_seller∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt12"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="dom(item_seller)=in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt13"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="highest_bids∈ITEM ⇸ ℕ1" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="dom(highest_bids)⊆in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="bids_buyer∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#9"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="dom(bids_buyer)=dom(highest_bids)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="paid_items∈ℙ(ITEM)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt3"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="paid_items⊆in_auction" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt14"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="seller_log∈ITEM ⇸ SELLER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="buyer_log∈ITEM ⇸ BUYER" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="dom(seller_log)∩in_auction⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="dom(buyer_log)⊆dom(seller_log)" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="dom(buyer_log)∩in_auction⊆paid_items" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#evt6"/>
+<org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="∀i⦂ITEM·i∉in_auction⇒(i∈dom(buyer_log)⇔i∈dom(seller_log))" org.eventb.core.source="/Auction/Auction_mch.bum|org.eventb.core.machineFile#Auction_mch|org.eventb.core.invariant#4"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="READER" org.eventb.core.type="ℙ(READER)"/>
+<org.eventb.core.poIdentifier name="IDS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="init_book_reader_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="init_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="init_count_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="init_reader_loaned" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="init_total_books" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="max_ID" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="max_loaned_books" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioritz" org.eventb.core.predicate="max_loaned_books∈ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="init_book_reader_priorit{" org.eventb.core.predicate="finite(READER)∧finite(BOOK)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#W"/>
+<org.eventb.core.poPredicate name="init_book_reader_priorit|" org.eventb.core.predicate="max_ID∈ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="init_book_reader_priorit}" org.eventb.core.predicate="max_ID&gt;card(READER)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#V"/>
+<org.eventb.core.poPredicate name="init_book_reader_priorit~" org.eventb.core.predicate="init_books⊆BOOK" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu'" org.eventb.core.predicate="init_count_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu(" org.eventb.core.predicate="init_total_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu)" org.eventb.core.predicate="init_books=dom(init_total_books)∧init_books=dom(init_count_books)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#&gt;"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu*" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#C"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu+" org.eventb.core.predicate="∀r⦂READER·r∈READER⇒finite(init_reader_loaned(r))" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu," org.eventb.core.predicate="IDS=1 ‥ max_ID" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#R"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu-" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#H"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu." org.eventb.core.predicate="∀r⦂READER·r∈READER∧card(init_reader_loaned(r))≤max_loaned_books" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#O"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu/" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧ran(init_book_reader_priority(b))⊆IDS" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#M"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu0" org.eventb.core.predicate="∀b⦂BOOK,r1⦂READER,r2⦂READER,p⦂ℙ(READER×ℤ)·b∈BOOK∧r1∈dom(p)∧r2∈dom(p)∧p=init_book_reader_priority(b)∧p(r1)≠p(r2)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#T"/>
+<org.eventb.core.poPredicate name="init_book_reader_prioriu1" org.eventb.core.predicate="∀b⦂BOOK·b∈BOOK∧init_total_books(b)≥init_count_books(b)" org.eventb.core.source="/LibrarySystem/LSctx.buc|org.eventb.core.contextFile#LSctx|org.eventb.core.axiom#X"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="available_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="book_count_arr" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="book_total_arr" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="reader_loaned_arr" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="waiter_priority" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·b∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)∧(prior=waiter_priority(b)⇒b∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ∧b∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ)∧(prior=waiter_priority(b)∧book_count_arr(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior∈READER ⇸ ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒b∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ∧b∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="init_count_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="init_total_books∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="init_reader_loaned∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="init_book_reader_priority∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=init_book_reader_priority(b)∧init_count_books(b)≤init_total_books(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ars"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈init_books⇒init_total_books(b)≥init_count_books(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_ars" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="reader_loaned_arr'" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="waiter_priority'" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="available_books'" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="book_total_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_ars" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_ars" org.eventb.core.poStamp="21"/>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(reader_loaned_arr)∧reader_loaned_arr∈READER ⇸ ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(_user_books)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_count_arr{book ↦ _count − 1}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan book (without wait reservation)\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader_loaned_arr{reader ↦ _user_books∪{book}}∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan book (without wait reservation)\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=waiter_priority(b)∧(book_count_arr{book ↦ _count − 1})(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan book (without wait reservation)\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan book (without wait reservation)/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_art"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒book_total_arr(b)≥(book_count_arr{book ↦ _count − 1})(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan book (without wait reservation)\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_art" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="reader_loaned_arr'" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="_user_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+<org.eventb.core.poIdentifier name="_count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_art'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_art" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books∧reader∈READER" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_art)" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="_count=book_count_arr(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="_count&gt;1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_art," org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art)" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="_user_books=reader_loaned_arr(reader)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="book∉_user_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#2"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="book∉dom(waiter_priority)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_art" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_art," org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="card(_user_books)&lt;max_loaned_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#,|org.eventb.core.guard#4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="loan reserved book/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(reader_loaned_arr)∧reader_loaned_arr∈READER ⇸ ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#C"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#C"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(_priorities)∧_priorities∈READER ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(_priorities)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(_priorities)⇒b≤x)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#D"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#D"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(_user_books)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#:"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_count_arr{book ↦ _count − 1}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan reserved book\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader_loaned_arr{reader ↦ _user_books∪{book}}∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan reserved book\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="waiter_priority{book ↦ _new_priorities}∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan reserved book\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=(waiter_priority{book ↦ _new_priorities})(b)∧(book_count_arr{book ↦ _count − 1})(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan reserved book\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="loan reserved book/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_aru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒book_total_arr(b)≥(book_count_arr{book ↦ _count − 1})(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#loan reserved book\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_aru" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="_min_priority" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="reader_loaned_arr'" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="waiter_priority'" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="_user_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="_new_priorities" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="_priorities" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+<org.eventb.core.poIdentifier name="_count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_aru" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books∧reader∈READER" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru)" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="_count=book_count_arr(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="_count&gt;1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru*" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru)" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="book_total_arr(book)&gt;1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru+" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru*" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="_user_books=reader_loaned_arr(reader)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru-" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru+" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="_priorities=waiter_priority(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#C"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="_new_priorities={reader} ⩤ _priorities" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#F"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru." org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru-" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="_min_priority=_priorities(reader)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru/" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru." org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="_min_priority=min(ran(_priorities))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#D"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru0" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru\/" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="card(_user_books)&lt;max_loaned_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_aru1" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru0" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="waiter_priority(book)≠(∅ ⦂ ℙ(READER×ℤ))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_aru" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_aru1" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="ran(waiter_priority(book))≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#=|org.eventb.core.guard#@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(_wbs)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(_wbs)⇒b≥x)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="waiter_priority{book ↦ _new_wbs∪{reader ↦ _new_max_priority}}∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#reserve book (add to wait list)\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve book (add to wait list)/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=(waiter_priority{book ↦ _new_wbs∪{reader ↦ _new_max_priority}})(b)∧book_count_arr(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#reserve book (add to wait list)\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_arv" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="waiter_priority'" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="_new_wbs" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="_wbs" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+<org.eventb.core.poIdentifier name="_new_max_priority" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arv'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_arv" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books∧reader∈READER" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arv(" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book_count_arr(book)=1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arv)" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv(" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="book_total_arr(book)≠1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arv+" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv)" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="_wbs=waiter_priority(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#4"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="_new_wbs={reader} ⩤ _wbs" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_arv" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arv+" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="_new_max_priority=max(ran(_wbs))+1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="_new_max_priority≤max_ID" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#&gt;|org.eventb.core.guard#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="first reserve book (add first reservation)/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="first reserve book (add first reservation)/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="first reserve book (add first reservation)/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="first reserve book (add first reservation)/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="waiter_priority{book ↦ {reader ↦ 1}}∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#first reserve book (add first reservation)\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="first reserve book (add first reservation)/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=(waiter_priority{book ↦ {reader ↦ 1}})(b)∧book_count_arr(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#first reserve book (add first reservation)\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_arw" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="waiter_priority'" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arw'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_arw" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books∧reader∈READER" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arw)" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waiter_priority(book)=(∅ ⦂ ℙ(READER×ℤ))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="waiter_priority≠(∅ ⦂ ℙ(BOOK×ℙ(READER×ℤ)))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arw*" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw)" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="book_count_arr(book)=1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_arw" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arw*" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="book_total_arr(book)≠1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#C|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="return book/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(reader_loaned_arr)∧reader_loaned_arr∈READER ⇸ ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ∧book∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_count_arr{book ↦ 1+book_count_arr(book)}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#return book\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader_loaned_arr{reader ↦ reader_loaned_arr(reader) ∖ {book}}∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#return book\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=waiter_priority(b)∧(book_count_arr{book ↦ 1+book_count_arr(book)})(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#return book\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒book_total_arr(b)≥(book_count_arr{book ↦ 1+book_count_arr(book)})(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#return book\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(reader_loaned_arr)∧reader_loaned_arr∈READER ⇸ ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.action#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="return book/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arx"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_arx" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="reader_loaned_arr'" org.eventb.core.type="ℙ(READER×ℙ(BOOK))"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arx'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_arx" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books∧reader∈READER" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_arx(" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∈reader_loaned_arr(reader)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_arx" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_arx(" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="book_count_arr(book)+1≤book_total_arr(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#1|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="add new books/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_count_arr{book ↦ count}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add new books\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add new books/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_total_arr{book ↦ count}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add new books\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add new books/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=waiter_priority(b)∧(book_count_arr{book ↦ count})(b)≤(book_total_arr{book ↦ count})(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add new books\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add new books/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ary"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books∪{book}⇒(book_total_arr{book ↦ count})(b)≥(book_count_arr{book ↦ count})(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add new books\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_ary" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="available_books'" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="book_total_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_ary" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_ary" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈BOOK∧count∈ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∉available_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#4|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="add book copies/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_count_arr{book ↦ book_count_arr(book)+count}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add book copies\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add book copies/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book_total_arr{book ↦ book_total_arr(book)+count}∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add book copies\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add book copies/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=waiter_priority(b)∧(book_count_arr{book ↦ book_count_arr(book)+count})(b)≤(book_total_arr{book ↦ book_total_arr(book)+count})(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add book copies\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add book copies/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒(book_total_arr{book ↦ book_total_arr(book)+count})(b)≥(book_count_arr{book ↦ book_count_arr(book)+count})(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#add book copies\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add book copies/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_count_arr)∧book_count_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.action#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add book copies/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(book_total_arr)∧book_total_arr∈BOOK ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_arz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_arz" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="book_total_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+<org.eventb.core.poIdentifier name="book_count_arr'" org.eventb.core.type="ℙ(BOOK×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_arz" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_arz" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="count∈ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∈available_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#5|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/grd16/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#I"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#I"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/grd12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈dom(waiter_priority)∧waiter_priority∈BOOK ⇸ ℙ(READER × ℤ)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(_ids)∧finite(IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/grd11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="reader∈dom(_priorities)∧_priorities∈READER ⇸ ℤ" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#&gt;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ar{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="waiter_priority{book ↦ _new_priorites∪{reader ↦ _new_id}}∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#shrink waitlist id (only used if max_ID is small)\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="shrink waitlist id (only used if max_ID is small)/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTALLHYPreader_loaned_ar{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=(waiter_priority{book ↦ _new_priorites∪{reader ↦ _new_id}})(b)∧book_count_arr(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poSequent#shrink waitlist id (only used if max_ID is small)\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTreader_loaned_ar{" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="_id" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="waiter_priority'" org.eventb.core.type="ℙ(BOOK×ℙ(READER×ℤ))"/>
+<org.eventb.core.poIdentifier name="_new_priorites" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="_new_id" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="_priorities" org.eventb.core.type="ℙ(READER×ℤ)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="reader" org.eventb.core.type="READER"/>
+<org.eventb.core.poIdentifier name="_ids" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_ar{'" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTIDENTreader_loaned_ar{" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈available_books" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_ar{(" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="reader∈dom(waiter_priority(book))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#I"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_ar{+" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{(" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="_priorities=waiter_priority(book)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#@"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="_ids=ran(_priorities)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#7"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="_ids≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_ar{," org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{+" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="waiter_priority(book)≠(∅ ⦂ ℙ(READER×ℤ))" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPreader_loaned_ar{-" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{," org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="card(_ids)&lt;card(IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPreader_loaned_ar{" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#EVTHYPreader_loaned_ar{-" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="_id=_priorities(reader)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#&gt;"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="_new_priorites={reader} ⩤ _priorities" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#D"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="_new_id=_id − 1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#H"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="_new_id∈IDS∧_new_id∉_ids" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.event#D|org.eventb.core.guard#G"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLSct}" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="available_books⊆BOOK" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book_count_arr∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="book_total_arr∈BOOK → ℕ1" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="reader_loaned_arr∈READER → ℙ(BOOK)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="waiter_priority∈BOOK → (READER ⤔ IDS)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLSct~" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀r⦂READER,b⦂BOOK,prior⦂ℙ(READER×ℤ)·prior=waiter_priority(b)∧book_count_arr(b)≤book_total_arr(b)∧r∈dom(prior)⇒prior(r)∈IDS" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#E"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LibrarySystem/LSmac.bpo|org.eventb.core.poFile#LSmac|org.eventb.core.poPredicateSet#HYPLSct~" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀b⦂BOOK·b∈available_books⇒book_total_arr(b)≥book_count_arr(b)" org.eventb.core.source="/LibrarySystem/LSmac.bum|org.eventb.core.machineFile#LSmac|org.eventb.core.invariant#F"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

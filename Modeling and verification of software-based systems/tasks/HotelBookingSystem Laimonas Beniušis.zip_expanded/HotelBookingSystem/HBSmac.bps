@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve_room/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="reserve_room/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="check_in/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="check_in/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="cancel_reservation/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="cancel_reservation/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="check_out/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="check_out/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

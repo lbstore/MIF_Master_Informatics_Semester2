@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="OPTION" org.eventb.core.type="ℙ(OPTION)"/>
+<org.eventb.core.poIdentifier name="PERMISSION" org.eventb.core.type="ℙ(PERMISSION)"/>
+<org.eventb.core.poIdentifier name="PRINTER" org.eventb.core.type="ℙ(PRINTER)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="NoAccess" org.eventb.core.type="PERMISSION"/>
+<org.eventb.core.poIdentifier name="Ok" org.eventb.core.type="PERMISSION"/>
+<org.eventb.core.poIdentifier name="Options" org.eventb.core.type="ℙ(PRINTER×OPTION)"/>
+<org.eventb.core.poPredicate name="PERMISSIOO" org.eventb.core.predicate="partition(PERMISSION,{Ok},{NoAccess})" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PERMISSIOP" org.eventb.core.predicate="Options∈PRINTER ↔ OPTION" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PERMISSIOQ" org.eventb.core.predicate="dom(Options)=PRINTER" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="PERMISSIOR" org.eventb.core.predicate="ran(Options)=OPTION" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="access" org.eventb.core.type="ℙ(USER×PRINTER)"/>
+<org.eventb.core.poIdentifier name="perm_query" org.eventb.core.type="PERMISSION"/>
+<org.eventb.core.poIdentifier name="printer_query" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_querz" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="access'" org.eventb.core.type="ℙ(USER×PRINTER)"/>
+<org.eventb.core.poIdentifier name="printer_query'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="perm_query'" org.eventb.core.type="PERMISSION"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_querz" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_querz" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_quer{" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="access'" org.eventb.core.type="ℙ(USER×PRINTER)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="PRINTER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_quer{" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_quer{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈PRINTER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#,|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_quer|" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="access'" org.eventb.core.type="ℙ(USER×PRINTER)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="PRINTER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_quer|" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_quer\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈PRINTER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_quer}" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="access'" org.eventb.core.type="ℙ(USER×PRINTER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_quer}" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_quer}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="u∈dom(access)" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_quer~" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="OPTION"/>
+<org.eventb.core.poIdentifier name="perm_query'" org.eventb.core.type="PERMISSION"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_quer~" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_quer~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈OPTION" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="u ↦ o∈access;Options" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt3|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_ques'" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="OPTION"/>
+<org.eventb.core.poIdentifier name="perm_query'" org.eventb.core.type="PERMISSION"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_ques'" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_ques'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt4|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈OPTION" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt4|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="u ↦ o∉access;Options" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt4|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTprinter_ques(" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="printer_query'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="PRINTER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPprinter_ques(" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTprinter_ques(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈PRINTER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#evt8|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PAccess/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="access∈USER ↔ PRINTER" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="perm_query∈PERMISSION" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="printer_query∈ℙ(USER)" org.eventb.core.source="/PAccess/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#evt7"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

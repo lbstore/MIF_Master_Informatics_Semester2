@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="OPTION" org.eventb.core.type="ℙ(OPTION)"/>
+<org.eventb.core.poIdentifier name="PERMISSION" org.eventb.core.type="ℙ(PERMISSION)"/>
+<org.eventb.core.poIdentifier name="PRINTER" org.eventb.core.type="ℙ(PRINTER)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="NoAccess" org.eventb.core.type="PERMISSION"/>
+<org.eventb.core.poIdentifier name="Ok" org.eventb.core.type="PERMISSION"/>
+<org.eventb.core.poIdentifier name="Options" org.eventb.core.type="ℙ(PRINTER×OPTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PAccess/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(PERMISSION,{Ok},{NoAccess})" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Options∈PRINTER ↔ OPTION" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(Options)=PRINTER" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ran(Options)=OPTION" org.eventb.core.source="/PAccess/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

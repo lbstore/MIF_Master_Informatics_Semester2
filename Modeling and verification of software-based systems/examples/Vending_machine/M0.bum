@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="ready ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="payed ≔ FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="served ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="choice ≔ None" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="ready"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="ready ∈ BOOL"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="payed"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="payed ∈ BOOL"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="served"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv3" org.eventb.core.predicate="served ∈ BOOL"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="choice"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv4" org.eventb.core.predicate="choice ∈ CHOICES"/>
+<org.eventb.core.seesContext name="0" org.eventb.core.target="Data"/>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="choose">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ch"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ch ∈ CHOICES"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="ch ≠ None"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="ready = TRUE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="choice ≔ ch" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="ready ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancel">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="choice ≠ None"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="choice ≔ None" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="ready ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="payed = FALSE"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="served = TRUE ⇒ payed = TRUE"/>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="pay">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="payed = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="payed ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="choice ≠ None"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="serve">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="served = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="served ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="payed = TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="to_ready">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="served = TRUE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="served ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="ready ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="payed ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="choice ≔ None" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv6" org.eventb.core.predicate="payed = TRUE ⇒ choice ≠ None"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv7" org.eventb.core.predicate="served = TRUE ⇒ choice ≠ None"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv8" org.eventb.core.predicate="choice ≠ None ⇒ ready = FALSE"/>
+</org.eventb.core.machineFile>

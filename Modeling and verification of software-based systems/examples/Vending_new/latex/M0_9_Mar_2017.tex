@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of M0}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{M0}{9Mar2017}{10:43:41 AM}
+\MACHINE{M0}
+\SEES{C0}
+\VARIABLES
+	\begin{description}
+		\Item{ ready }
+		\Item{ choice }
+		\Item{ payed }
+		\Item{ served }
+		\Item{ nItems }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ inv1 }{ ready \in  BOOL }
+		\nItem{ inv2 }{ choice \in  CHOICES }
+		\nItem{ inv3 }{ payed \in  BOOL }
+		\nItem{ inv4 }{ served \in  BOOL }
+		\nItem{ inv5 }{ served = TRUE \limp  payed = TRUE }
+		\nItem{ inv6 }{ choice \neq  NONE \limp  ready = FALSE }
+		\nItem{ inv7 }{ served = TRUE \limp  choice \neq  NONE }
+		\nItem{ inv8 }{ payed = TRUE \limp  choice \neq  NONE }
+		\nItem{ inv9 }{ ready = TRUE \limp  choice = NONE \land  payed = FALSE }
+		\nItem{ inv11 }{ nItems \in  Items \tfun  \nat  }
+		\nItem{ inv12 }{ choice \neq  NONE \land  served = FALSE \limp  nItems(choice) >  0 }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ ready :=  TRUE }
+			\nItem{ act2 }{ choice :=  NONE }
+			\nItem{ act3 }{ payed :=  FALSE }
+			\nItem{ act4 }{ served :=  FALSE }
+			\nItem{ act6 }{ nItems :=  Items \cprod  \{ initial\_amount\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {choose}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{ch }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ ready = TRUE }
+			\nItem{ grd2 }{ ch \neq  NONE }
+			\nItem{ grd3 }{ nItems(ch) >  0 }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ choice :=  ch }
+			\nItem{ act2 }{ ready :=  FALSE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {cancel}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ choice \neq  NONE }
+			\nItem{ grd2 }{ payed = FALSE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ choice :=  NONE }
+			\nItem{ act2 }{ ready :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {pay}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{credit }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ choice \neq  NONE }
+			\nItem{ grd2 }{ payed = FALSE }
+			\nItem{ grd3 }{ credit \in  \nat_1 }
+			\nItem{ grd4 }{ credit \geq  price(choice) }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ payed :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {serve}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ payed = TRUE }
+			\nItem{ grd2 }{ served = FALSE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ served :=  TRUE }
+			\nItem{ act2 }{ nItems(choice) :=  nItems(choice) -  1 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {to\_ready}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ served = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ served :=  FALSE }
+			\nItem{ act2 }{ choice :=  NONE }
+			\nItem{ act3 }{ payed :=  FALSE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {add\_items}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{it }
+			\Item{n }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ grd1 }{ ready = TRUE }
+			\nItem{ grd2 }{ it \in  Items }
+			\nItem{ grd3 }{ n \in  \nat_1  }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ nItems(it) :=  nItems(it) + n }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

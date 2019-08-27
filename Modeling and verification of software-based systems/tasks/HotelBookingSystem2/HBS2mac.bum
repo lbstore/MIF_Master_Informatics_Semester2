@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="reserved, occupied ≔ ∅, ∅" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="HBS2ctx"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="occupied"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="reserved"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="make reservation">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="customer"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="room"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="dates"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="reservation ∈ RESERVATION" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="dates ∈ ℙ1(DATE)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="room_reservation(reservation) = room"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="dates_reservation(reservation) = dates"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="reservation ∉ reserved ∪ occupied"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="customer_reservation(reservation) = customer"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="∀ r · r ∈ reserved ∪ occupied ∧ r ≠ reservation ∧ room_reservation(r) = room_reservation(reservation) ⇒ dates_reservation(r) ∩ dates_reservation(reservation) = ∅ "/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="reserved ≔ reserved ∪ {reservation}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="reserved ∈ ℙ(RESERVATION)"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="occupied ∈ ℙ(RESERVATION)"/>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancel">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="reservation ∈ reserved ∧ reservation ∉ occupied"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="reserved ≔ reserved ∖ {reservation}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check−out">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="reservation ∈ occupied ∧ reservation ∉ reserved"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="occupied ≔ occupied ∖ {reservation}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check−in (with reservation)">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="reservation ∈ RESERVATION"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="reservation ∈ reserved ∧ reservation ∉ occupied"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="reserved ≔ reserved ∖ {reservation}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="occupied ≔ occupied ∪ {reservation}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check−in (without reservation)">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="reservation"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="dates"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="customer"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="room"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="reservation ∈ RESERVATION"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="(reservation ∉ occupied) ∧ (reservation ∉ reserved)"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="room_reservation(reservation) = room"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="dates_reservation(reservation) = dates"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="customer_reservation(reservation) = customer"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="∀r · r ∈ reserved ∪ occupied ∧ r ≠ reservation ∧ room_reservation(r) = room_reservation(reservation) ⇒ dates_reservation(r) ∩ dates_reservation(reservation) = ∅"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="occupied ≔ occupied ∪ {reservation}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="dates ∈ ℙ1(DATE)"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv3" org.eventb.core.predicate="∀ r1,r2 · r1 ∈ reserved ∪ occupied ∧ r2 ∈ reserved ∪ occupied ∧ r1 ≠ r2 ∧ room_reservation(r1) = room_reservation(r2) ⇒ dates_reservation(r1) ∩ dates_reservation(r2) = ∅"/>
+</org.eventb.core.machineFile>

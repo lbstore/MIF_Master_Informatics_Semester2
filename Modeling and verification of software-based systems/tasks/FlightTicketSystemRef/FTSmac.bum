@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="f_seats_arr ≔ f_total_seats" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="(" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="book tickets">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ticket_count"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="flight"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="date"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="ticket_count ≤ f_seats_arr(_inst)"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="f_seats_arr(_inst) ≔ f_seats_arr(_inst) − ticket_count" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="_inst"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="ticket_count ∈ ℕ1"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="_inst = f_inst({flight ↦ date})"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="date ∈ DATE ∧ flight ∈ FLIGHT"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cancel tickets">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ticket_count"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="ticket_count ∈ ℕ1"/>
+<org.eventb.core.guard name="grd4" org.eventb.core.label="grd3" org.eventb.core.predicate="_inst = f_inst({flight ↦ date})"/>
+<org.eventb.core.guard name="grd6" org.eventb.core.label="grd5" org.eventb.core.predicate="f_date(_inst) = date"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="(ticket_count + f_seats_arr(_inst)) ≤ f_total_seats(_inst)"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="f_seats_arr(_inst) ≔ f_seats_arr(_inst) + ticket_count" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="flight"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="date"/>
+<org.eventb.core.parameter name="grd3" org.eventb.core.identifier="_inst"/>
+<org.eventb.core.guard name="grd5" org.eventb.core.label="grd4" org.eventb.core.predicate="_inst ∈ FLIGHT_INSTANCE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="book merge flights">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ticket_count"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="city_origin"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="city_dest"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="date"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="ticket_count ∈ ℕ1"/>
+<org.eventb.core.guard name=":" org.eventb.core.label="grd6" org.eventb.core.predicate="_f1_inst = f_inst({_f1 ↦ date})"/>
+<org.eventb.core.guard name=";" org.eventb.core.label="grd7" org.eventb.core.predicate="_f2_inst = f_inst({_f2 ↦ date})"/>
+<org.eventb.core.guard name="&gt;" org.eventb.core.label="grd8" org.eventb.core.predicate="_f1 ≠ _f2 ∧ _f1_inst ≠ _f2_inst"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="ticket_count ≤ f_seats_arr(_f1_inst) ∧ ticket_count ≤ f_seats_arr(_f2_inst) "/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="_f1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="_f2"/>
+<org.eventb.core.guard name="F" org.eventb.core.label="grd11" org.eventb.core.predicate="f_origin(_f2) = f_dest(_f1) ∧ f_dest(_f2) = city_dest ∧ f_origin(_f1) = city_origin "/>
+<org.eventb.core.guard name="6" org.eventb.core.label="grd4" org.eventb.core.predicate="date ∈ DATE ∧ city_origin ∈ CITY ∧ city_dest ∈ CITY"/>
+<org.eventb.core.parameter name="8" org.eventb.core.identifier="_f1_inst"/>
+<org.eventb.core.parameter name="9" org.eventb.core.identifier="_f2_inst"/>
+<org.eventb.core.parameter name="?" org.eventb.core.identifier="_newSeats1"/>
+<org.eventb.core.parameter name="@" org.eventb.core.identifier="_newSeats2"/>
+<org.eventb.core.guard name="A" org.eventb.core.label="grd9" org.eventb.core.predicate="_newSeats1 = f_seats_arr(_f1_inst) − ticket_count"/>
+<org.eventb.core.guard name="B" org.eventb.core.label="grd10" org.eventb.core.predicate="_newSeats2 = f_seats_arr(_f2_inst) − ticket_count"/>
+<org.eventb.core.action name="E" org.eventb.core.assignment="f_seats_arr ≔ f_seats_arr  { _f1_inst ↦ _newSeats1, _f2_inst ↦ _newSeats2}" org.eventb.core.comment="&#13;&#10;&#13;&#10;//Perrasymas abieju reiksmiu, nes priskyrimas dvieju reiksmiu neleistinas" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="G" org.eventb.core.label="grd12" org.eventb.core.predicate="_newSeats1 ≤ f_total_seats(_f1_inst) ∧ _newSeats1 ≥ 0"/>
+<org.eventb.core.guard name="H" org.eventb.core.label="grd13" org.eventb.core.predicate="_newSeats2 ≤ f_total_seats(_f2_inst) ∧ _newSeats2 ≥ 0"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="+" org.eventb.core.target="FTSctx"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="f_seats_arr"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="f_seats_arr ∈ FLIGHT_INSTANCE → ℕ"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="∀ f · f ∈ FLIGHT_INSTANCE ⇒ f_total_seats(f) ≥ f_seats_arr(f)"/>
+</org.eventb.core.machineFile>

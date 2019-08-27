@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="RESERVATION"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="DATE"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="CUSTOMER"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="ROOM"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="customer_reservation"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="room_reservation"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="dates_reservation"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="customer_reservation ∈ RESERVATION → CUSTOMER"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm2" org.eventb.core.predicate="room_reservation ∈ RESERVATION → ROOM"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm3" org.eventb.core.predicate="dates_reservation ∈ RESERVATION → ℙ1(DATE)"/>
+</org.eventb.core.contextFile>

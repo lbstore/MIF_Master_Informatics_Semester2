@@ -1,0 +1,12 @@
+  1. Pateikite porą programų sistemų architektūros pavyzdžių ir trumpai juos apibūdinkite.
+  2. Pirmasis programų sistemos architektūros projektavimo etapas yra jos konteksto apibrėžimas. Kokios pagrindinės esybės sudaro programų sistemos kontekstą?
+  3. Kokią naudą programų sistemų kūrime teikia architektūros projektavimas? 
+
+
+
+Mano:
+
+1. Ar architektūros projektavimas atneša naudos kuriant programų sistemas? Pagrįsti atsakymą.
+2. Kuo skiriasi architektūros stilius (style) ir architektūros šablonas (pattern). Pateikite pavyzdžių.
+3. Kam (kurioms suinteresuotoms šalims) architektūros aprašas gali būti skirtas?
+4. (papildomas) Kokie yra pagridniniai architektūros konteksto komponentai?

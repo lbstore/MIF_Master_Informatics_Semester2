@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of C0}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{C0}{9Mar2017}{10:43:41 AM}
+\CONTEXT{C0}
+\SETS
+	\begin{description}
+		\Item{ CHOICES }
+	\end{description}
+\CONSTANTS
+	\begin{description}
+		\Item{ NONE }
+		\Item{ price }
+		\Item{ initial\_amount }
+		\Item{ Items }
+	\end{description}
+\AXIOMS
+	\begin{description}
+		\nItem{ axm1 }{ NONE \in  CHOICES }		\nItem{ axm2 }{ price \in  CHOICES \pfun  \nat_1  }		\nItem{ axm3 }{ dom(price) = CHOICES \setminus  \{ NONE\}  }		\nItem{ axm4 }{ initial\_amount \in  \nat_1  }		\nItem{ axm5 }{ Items \subseteq  CHOICES }		\nItem{ axm6 }{ Items = CHOICES \setminus  \{ NONE\}  }	\end{description}
+\END
+\end{description}
+\end{document}
